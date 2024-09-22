@@ -22,7 +22,7 @@ This project aims to build a machine learning model that predicts the genre of a
     Evaluate the model's performance using cross-validation and metrics (accuracy, F1-score).
 4. Evaluate Model Performance:
 
-    Check for the effectiveness of the model. Analyze predictios.
+    Check for the effectiveness of the model. Analyze predictions.
 5. Integrate Spotify API:
     
 6. Make Predictions on New Songs:
