@@ -2,7 +2,7 @@
 ## Code-Pudding-Sept-24
 
 ## Description
-This project aims to build a machine learning model that predicts the genre of a song using various metrics provided by Spotify. The goal is to create a predictive model that can  classify the genre of a song based on its features such as danceability, energy, tempo, and other characteristics. Additionally, this project will use the Spotify API to retrieve these song metrics for any new track, allowing us to make predictions on new songs.
+This project builds a machine learning model that predicts the genre of a song using various metrics provided by Spotify. The goal is to create a predictive model that can  classify the genre of a song based on its features such as danceability, energy, tempo, and other characteristics. Additionally, the Spotify API is used to retrieve these song metrics for any new track, allowing us to make predictions on new songs.
 
 ## Setup Instructions
 
