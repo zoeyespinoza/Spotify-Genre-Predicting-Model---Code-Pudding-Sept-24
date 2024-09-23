@@ -23,7 +23,7 @@ This project builds a machine learning model that predicts the genre of a song u
 4. Evaluate Model Performance:
 
     Check for the effectiveness of the model. Analyze predictions.
-5. Integrate Spotify API:
+5. Integrate Spotify API
     
 6. Make Predictions on New Songs:
     
