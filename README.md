@@ -91,7 +91,28 @@ We tested various models and collected the following metrics:
 | 6     | Logistic Regression                | 0.424918  | 0.874830 | 0.417778  |
 | 7     | KNeighbors Classifier              | 0.437653  | 0.773724 | 0.435556  |
 
+## Prediction Function
+```python
+def predict_genre(track: str, artist: str, X_train, y_train, model, sp, top_ten_genres):
+    # Search for the track and artist
+    results = sp.search(q=f'track:{track} artist:{artist}', type='track', limit=1)
+    for item in results['tracks']['items']:
+        track_id = item['id']
+        audio_features = get_audio_features(track_id)
+        if (audio_features['genre'] in top_ten_genres and 
+                track_id not in X_train['id'].values and 
+                track_id not in y_train.values):
+            
+            features = audio_features.drop(columns=['id', 'uri', 'track_href', 'analysis_url', 'type', 'genre'], axis=1)
 
+            predicted_genre = model.predict(features)
+            return predicted_genre, audio_features['genre'].values[0]  # Return the predicted genre and actual genre
+        else:
+            return ('Track is either in a training set, an unused genre, or not findable by Spotify API')
+
+predict_genre(track='breath away', artist='Artemis', X_train=X_train, y_train=y_train, model=catboost_model, sp=sp, top_ten_genres=top_ten_genres)
+
+```
 ## Conclusion
 Conclusions about model performances, a table of the models' metrics, and graphs are provided.
 - The **CatBoostClassifier** works best for the AUC_ROC, accuracy, and f1 metrics. Metrics for all the models tried were collected in the above table for easy comparison. A constant model would be right only 10% of the time. **CatBoost had an overall accuracy of .57**. Classification reports were generated for each model for ease of comparison across individual genres and models. Support Vector Machines are incompatible with roc_auc scores so a np.nan was left in that spot in the table and graphs.
