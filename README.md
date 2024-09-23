@@ -34,7 +34,7 @@ This project builds a machine learning model that predicts the genre of a song u
     result = sp.search(q='breath away', type='track', limit=1)
     print(result)
     ```
-*cleaned_dataset_2.csv* - Built a dataset with over 1500 songs from Spotify API
+[*cleaned_dataset_2.csv*](clean_spotify_set_2.csv) - Built a dataset with over 1500 songs from Spotify API
 
 ## Data Project
 ### Workflow:
