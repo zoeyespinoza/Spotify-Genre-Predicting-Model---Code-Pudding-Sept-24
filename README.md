@@ -19,7 +19,7 @@ sp = spotipy.Spotify(auth_manager=SpotifyClientCredentials(client_id=client_id, 
 
 # Test
 result = sp.search(q='breath away', type='track', limit=1)
-print(result) ```
+print(result)```
 
 Follow these steps if you need to set up the project locally:
 
