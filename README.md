@@ -54,7 +54,6 @@ This project builds a machine learning model that predicts the genre of a song u
     - The trained model is used to predict the genre of new songs based on their Spotify audio features.
 
 ## Findings
-## Findings
 
 ### Included Genres:
 We classified songs into the following genres:
@@ -71,6 +70,7 @@ Distribution of Spotify audio metrics.
 
 Example: Classical music
 
+ ![Classical Metrics](graphs/classical_metrics.png)
 
 ## Model Performance:
 
@@ -86,6 +86,8 @@ We tested various models and collected the following metrics:
 | 5     | CatBoostClassifier                 | 0.574362  | 0.913466 | 0.568889  |
 | 6     | Logistic Regression                | 0.424918  | 0.874830 | 0.417778  |
 | 7     | KNeighbors Classifier              | 0.437653  | 0.773724 | 0.435556  |
+
+ ![Model Scores](graphs/model_scores.png)
 
 ## Conclusion
 Conclusions about model performances, a table of the models' metrics, and graphs are provided.
