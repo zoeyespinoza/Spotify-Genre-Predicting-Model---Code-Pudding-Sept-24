@@ -73,7 +73,7 @@ Example: Classical music
 
  ![Classical Metrics](graphs/classical_metrics.png)
 
-Distribution of metrics for the classical genre.
+Above is distribution of metrics for the classical genre.
  
  ![Heatmap](graphs/heatmap.png)
 
