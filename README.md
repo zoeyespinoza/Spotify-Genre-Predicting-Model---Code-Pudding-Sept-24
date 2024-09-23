@@ -27,8 +27,12 @@ This project builds a machine learning model that predicts the genre of a song u
     
 6. Make Predictions on New Songs:
     
-    Trained machine learning model predicts the genre of a new song based on its Spotify audio features.
+    Trained a machine learning model to predicts the genre of a new song based on its Spotify audio features.
 
 ## Conclusion
 
 ## Members:
+
+[Ayyammal G. - Data Scientist](https://github.com/ayyammal-g) - [Linkedin](https://www.linkedin.com/in/ayyammal-g-25462591/)
+[Erik M. - Data Scientist](https://github.com/tempest-fugue) - [Linkedin]()
+[Zoey Espinoza - Data Scientist](https://github.com/zoeyespinoza) - [Linkedin](https://www.linkedin.com/in/zoeyespinoza/)
