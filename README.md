@@ -60,6 +60,20 @@ pip install -r requirements.txt
     
     Trained a machine learning model to predicts the genre of a new song based on its Spotify audio features.
 
+## Findings
+Included Genres: 
+genres = 
+    'pop', 'rock', 'jazz', 'classical', 'hip-hop', 'metal', 'reggae', 'blues',
+    'country', 'edm', 'latin', 'soul', 'punk', 'folk', 'funk', 'indie', 'disco',
+    'r&b', 'gospel', 'alternative'
+Included Metrics:
+
+danceability,	energy,	key,	loudness,	mode,	speechiness,	acousticness,	instrumentalness,	liveness,	valence,	tempo	
+
+Distribution of Spotify audio metrics.
+
+Example: CLassical music
+
 ## Conclusion
 Conclusions about model performances, a table of the models' metrics, and graphs are provided.
 
