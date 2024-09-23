@@ -43,7 +43,7 @@ pip install -r requirements.txt
 ### Workflow:
 1. Collect Data
     
-    Build a dataset within Spotify
+    Build a dataset from Spotify API calls. Store each new API call locally in 'clean_spotify_set_2'. We read from that file for the data needed to train models.
 
 2. Preprocess Data:
 
@@ -52,17 +52,16 @@ pip install -r requirements.txt
     
     Train models using the audio metrics as features and genre as target.
     
-    Evaluate the model's performance using cross-validation and metrics (accuracy, F1-score).
+    Evaluate the model's performance using cross-validation and metrics (accuracy, F1-score, AUC-ROC).
 4. Evaluate Model Performance:
 
-    Check for the effectiveness of the model. Analyze predictions.
-5. Integrate Spotify API
-    
-6. Make Predictions on New Songs:
+    Check for the effectiveness of the model. Analyze predictions.    
+5. Make Predictions on New Songs:
     
     Trained a machine learning model to predicts the genre of a new song based on its Spotify audio features.
 
 ## Conclusion
+       Conclusions about model performances, a table of the models' metrics, and graphs are provided.
 
 ## Members:
 
