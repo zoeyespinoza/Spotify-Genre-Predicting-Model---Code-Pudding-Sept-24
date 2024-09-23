@@ -34,5 +34,7 @@ This project builds a machine learning model that predicts the genre of a song u
 ## Members:
 
 [Ayyammal G. - Data Scientist](https://github.com/ayyammal-g) - [Linkedin](https://www.linkedin.com/in/ayyammal-g-25462591/)
+
 [Erik M. - Data Scientist](https://github.com/tempest-fugue) - [Linkedin]()
+
 [Zoey Espinoza - Data Scientist](https://github.com/zoeyespinoza) - [Linkedin](https://www.linkedin.com/in/zoeyespinoza/)
