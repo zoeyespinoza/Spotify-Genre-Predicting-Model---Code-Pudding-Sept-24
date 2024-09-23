@@ -61,7 +61,7 @@ We classified songs into the following genres:
 
 ### Included Metrics:
 Key audio features used in the models include:
-- danceability, energy, key, loudness, mode, speechiness, acousticness, instrumentalness, liveness, valence, tempo
+- danceability, energy, key, loudness, mode, speechiness, acousticness, instrumentalness, liveness, valence, tempo, duration_ms, time signature
 
 ### Example: Classical Music
 We found that classical music was consistently the most identifiable genre across different models.
@@ -76,6 +76,9 @@ Example: Classical music
 
 We tested various models and collected the following metrics:
 
+ ![Model Scores](graphs/model_scores.png)
+ 
+
 | Index | Model                              | F1        | AUC_ROC  | Accuracy  |
 |-------|------------------------------------|-----------|----------|-----------|
 | 0     | Random Forest                      | 0.472206  | 0.885439 | 0.471111  |
@@ -87,7 +90,6 @@ We tested various models and collected the following metrics:
 | 6     | Logistic Regression                | 0.424918  | 0.874830 | 0.417778  |
 | 7     | KNeighbors Classifier              | 0.437653  | 0.773724 | 0.435556  |
 
- ![Model Scores](graphs/model_scores.png)
 
 ## Conclusion
 Conclusions about model performances, a table of the models' metrics, and graphs are provided.
