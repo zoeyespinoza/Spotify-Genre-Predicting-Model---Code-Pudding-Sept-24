@@ -73,6 +73,12 @@ Example: Classical music
 
  ![Classical Metrics](graphs/classical_metrics.png)
 
+Distribution of metrics for the classical genre.
+ 
+ ![Heatmap](graphs/heatmap.png)
+
+Heatmap shows that the most highly correlated fields to the target would be energy and loudness. Danceability and speechiness look to to have about a .25 or .3 correlation to our target. There exists mulitcollinear features like energy and loudness, but we will continue to can use both of them for boosted and decision tree based models.
+
 ## Model Performance:
 
 We tested various models and collected the following metrics:
