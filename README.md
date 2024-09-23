@@ -69,11 +69,11 @@ genres =
 
 Included Metrics:
 
-danceability,	energy,	key,	loudness,	mode,	speechiness,	acousticness,	instrumentalness,	liveness,	valence,	tempo	
+danceability, energy, key, loudness, mode, speechiness, acousticness, instrumentalness, liveness, valence, tempo	
 
 Distribution of Spotify audio metrics.
 
-Example: CLassical music
+Example: Classical music
 
 ## Conclusion
 Conclusions about model performances, a table of the models' metrics, and graphs are provided.
