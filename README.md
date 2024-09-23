@@ -5,78 +5,76 @@
 This project builds a machine learning model that predicts the genre of a song using various metrics provided by Spotify. The goal is to create a predictive model that can  classify the genre of a song based on its features such as danceability, energy, tempo, and other characteristics.  Spotify API is used to retrieve these song metrics for a new track and make predictions on new songs.
 
 ## Setup Instructions:
+1. Clone the repository:
+    ```bash
+    git clone https://github.com/zoeyespinoza/Spotify-Genre-Predicting-Model---Code-Pudding-Sept-24.git
+    cd Spotify-Genre-Predicting-Model---Code-Pudding-Sept-24/
+    ```
 
-### Spotify API
-Setup API at https://developer.spotify.com/
+2. Install required packages:
+    ```bash
+    pip install -r requirements.txt
+    ```
 
-use python code:
-```python
-client_id = "your-client-id"
-client_secret = "your-client-secret"
+3. Set up the Spotify API:
+    - Go to [Spotify Developer](https://developer.spotify.com/) and create an application.
+    - Get your `client_id` and `client_secret`.
 
-# Authenticate with Spotify API
-sp = spotipy.Spotify(auth_manager=SpotifyClientCredentials(client_id=client_id, client_secret=client_secret))
+4. Use the following Python code to authenticate with the Spotify API:
+    ```python
+    import spotipy
+    from spotipy.oauth2 import SpotifyClientCredentials
 
-# Test
-result = sp.search(q='breath away', type='track', limit=1)
-print(result)
-```
+    client_id = "your-client-id"
+    client_secret = "your-client-secret"
 
-Follow these steps if you need to set up the project locally:
+    sp = spotipy.Spotify(auth_manager=SpotifyClientCredentials(client_id=client_id, client_secret=client_secret))
 
-**Clone the Repository**
-
-```bash
-git clone https://github.com/zoeyespinoza/Spotify-Genre-Predicting-Model---Code-Pudding-Sept-24/.git
-cd Spotify-Genre-Predicting-Model---Code-Pudding-Sept-24/
-npm install
-npm run dev
-```
-
-Install requirments.txt to run .ipynb files locally:
-
-```bash
-pip install -r requirements.txt
-```
-
+    # Test
+    result = sp.search(q='breath away', type='track', limit=1)
+    print(result)
+    ```
 ## Data Project
 ### Workflow:
-1. Collect Data
-    
-    Build a dataset from Spotify API calls. Store each new API call locally in 'clean_spotify_set_2'. We read from that file for the data needed to train models.
+## Data Workflow
 
-2. Preprocess Data:
+1. **Collect Data**:
+    - We use the Spotify API to collect song data and store it locally in `clean_spotify_set_2.csv`. The script updates the dataset automatically with new API calls, while checking for duplicates.
 
-    Clean and preprocess dataset for model training.
-3. Train Models:
-    
-    Train models using the audio metrics as features and genre as target.
-    
-    Evaluate the model's performance using cross-validation and metrics (accuracy, F1-score, AUC-ROC).
-4. Evaluate Model Performance:
+2. **Preprocess Data**:
+    - Data is cleaned and preprocessed for model training. We normalize and encode relevant features like danceability, energy, etc., and handle missing data.
 
-    Check for the effectiveness of the model. Analyze predictions.    
-5. Make Predictions on New Songs:
-    
-    Trained a machine learning model to predicts the genre of a new song based on its Spotify audio features.
+3. **Train Models**:
+    - Train various machine learning models using the preprocessed data. Models include Random Forest, SVM, CatBoost, etc. Performance is evaluated using cross-validation and key metrics like accuracy, F1-score, and AUC-ROC.
+
+4. **Evaluate Model Performance**:
+    - Model evaluation focuses on key metrics, and predictions are compared across different genres. The best model (CatBoost) had an accuracy of 57%, while SVM struggled with AUC-ROC scores.
+
+5. **Make Predictions**:
+    - The trained model is used to predict the genre of new songs based on their Spotify audio features.
 
 ## Findings
-Included Genres: 
-genres = 
-    'pop', 'rock', 'jazz', 'classical', 'hip-hop', 'metal', 'reggae', 'blues',
-    'country', 'edm', 'latin', 'soul', 'punk', 'folk', 'funk', 'indie', 'disco',
-    'r&b', 'gospel', 'alternative'
+## Findings
 
-Included Metrics:
+### Included Genres:
+We classified songs into the following genres:
+- 'pop', 'rock', 'jazz', 'classical', 'hip-hop', 'metal', 'reggae', 'blues', 'country', 'edm', 'latin', 'soul', 'punk', 'folk', 'funk', 'indie', 'disco', 'r&b', 'gospel', 'alternative'
 
-danceability, energy, key, loudness, mode, speechiness, acousticness, instrumentalness, liveness, valence, tempo	
+### Included Metrics:
+Key audio features used in the models include:
+- danceability, energy, key, loudness, mode, speechiness, acousticness, instrumentalness, liveness, valence, tempo
+
+### Example: Classical Music
+We found that classical music was consistently the most identifiable genre across different models.
 
 Distribution of Spotify audio metrics.
 
 Example: Classical music
 
-## Conclusion
-Conclusions about model performances, a table of the models' metrics, and graphs are provided.
+
+## Model Performance:
+
+We tested various models and collected the following metrics:
 
 | Index | Model                              | F1        | AUC_ROC  | Accuracy  |
 |-------|------------------------------------|-----------|----------|-----------|
@@ -89,7 +87,8 @@ Conclusions about model performances, a table of the models' metrics, and graphs
 | 6     | Logistic Regression                | 0.424918  | 0.874830 | 0.417778  |
 | 7     | KNeighbors Classifier              | 0.437653  | 0.773724 | 0.435556  |
 
-
+## Conclusion
+Conclusions about model performances, a table of the models' metrics, and graphs are provided.
 - The **CatBoostClassifier** works best for the AUC_ROC, accuracy, and f1 metrics. Metrics for all the models tried were collected in the above table for easy comparison. A constant model would be right only 10% of the time. **CatBoost had an overall accuracy of .57**. Classification reports were generated for each model for ease of comparison across individual genres and models. Support Vector Machines are incompatible with roc_auc scores so a np.nan was left in that spot in the table and graphs.
 
 ### Reflections
