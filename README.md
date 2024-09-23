@@ -4,7 +4,39 @@
 ## Description
 This project builds a machine learning model that predicts the genre of a song using various metrics provided by Spotify. The goal is to create a predictive model that can  classify the genre of a song based on its features such as danceability, energy, tempo, and other characteristics.  Spotify API is used to retrieve these song metrics for a new track and make predictions on new songs.
 
-## Setup Instructions
+## Setup Instructions:
+
+### Spotify API
+Setup API at https://developer.spotify.com/
+
+use python code:
+```Python
+client_id = "4e94c7a00ce841cb97a1eb6b94715735"
+client_secret = "023e76405fdc4e68af511d30ef91d172"
+
+# Authenticate with Spotify API
+sp = spotipy.Spotify(auth_manager=SpotifyClientCredentials(client_id=client_id, client_secret=client_secret))
+
+# Test
+result = sp.search(q='breath away', type='track', limit=1)
+print(result) ```
+
+Follow these steps if you need to set up the project locally:
+
+**Clone the Repository**
+
+```bash
+git clone https://github.com/zoeyespinoza/Spotify-Genre-Predicting-Model---Code-Pudding-Sept-24/.git
+cd Spotify-Genre-Predicting-Model---Code-Pudding-Sept-24/
+npm install
+npm run dev
+```
+
+Install requirments.txt to run .ipynb files locally:
+
+```bash
+pip install -r requirements.txt
+```
 
 ## Data Project
 ### Workflow:
