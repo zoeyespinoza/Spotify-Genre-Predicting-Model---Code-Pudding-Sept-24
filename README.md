@@ -66,6 +66,7 @@ genres =
     'pop', 'rock', 'jazz', 'classical', 'hip-hop', 'metal', 'reggae', 'blues',
     'country', 'edm', 'latin', 'soul', 'punk', 'folk', 'funk', 'indie', 'disco',
     'r&b', 'gospel', 'alternative'
+
 Included Metrics:
 
 danceability,	energy,	key,	loudness,	mode,	speechiness,	acousticness,	instrumentalness,	liveness,	valence,	tempo	
