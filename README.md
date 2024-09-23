@@ -120,6 +120,7 @@ Conclusions about model performances, a table of the models' metrics, and graphs
 ### Reflections
 - The easiest way to improve models' performances would be to add more data to the 'clean_spotify_set2.csv' file. The code has been set up to allow for automatic updating of the dataset to increase the variety of data it has to work with, while checking for duplicates.
 - This code originally classified between 20 genres. The genres were shrunk to raise overall accuracy metrics for the models and allow the models to make clearer distinctions. The top ten most accurate genres from that list of 20 were chosen. Classical music consistently was the most identifiable across models. Of the original 20, the genre 'Soul' was least likely to be recognized which seems strangely appropriate of a computer. The API call still requests 20 different genres even though only ten were used for model training to try to keep the dataset as balanced as possible.
+- Created additional audio metric features, such as length song was played, and popularity of song. These were not used as they did not seem to improve the models.
 - The predict_genre() method was not able to be tested given certain restrictions with the API and relatively tight timeframe for this project.
 
 ## Members:
