@@ -1,5 +1,5 @@
 # Spotify-Genre-Predicting-Model
-## Code-Pudding-Sept-24
+## Code-Pudding-Sept-24 Team: TuneTensor
 
 ## Description
 This project builds a machine learning model that predicts the genre of a song using various metrics provided by Spotify. The goal is to create a predictive model that can  classify the genre of a song based on its features such as danceability, energy, tempo, and other characteristics.  Spotify API is used to retrieve these song metrics for a new track and make predictions on new songs.
