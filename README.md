@@ -34,9 +34,10 @@ This project builds a machine learning model that predicts the genre of a song u
     result = sp.search(q='breath away', type='track', limit=1)
     print(result)
     ```
+*cleaned_dataset_2.csv* - Built a dataset with over 1500 songs from Spotify API
+
 ## Data Project
 ### Workflow:
-## Data Workflow
 
 1. **Collect Data**:
     - We use the Spotify API to collect song data and store it locally in `clean_spotify_set_2.csv`. The script updates the dataset automatically with new API calls, while checking for duplicates.
