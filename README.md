@@ -10,7 +10,7 @@ This project builds a machine learning model that predicts the genre of a song u
 Setup API at https://developer.spotify.com/
 
 use python code:
-```Python
+```python
 client_id = "4e94c7a00ce841cb97a1eb6b94715735"
 client_secret = "023e76405fdc4e68af511d30ef91d172"
 
@@ -19,7 +19,8 @@ sp = spotipy.Spotify(auth_manager=SpotifyClientCredentials(client_id=client_id, 
 
 # Test
 result = sp.search(q='breath away', type='track', limit=1)
-print(result)```
+print(result)
+```
 
 Follow these steps if you need to set up the project locally:
 
