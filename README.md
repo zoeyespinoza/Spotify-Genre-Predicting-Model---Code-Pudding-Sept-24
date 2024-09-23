@@ -61,7 +61,19 @@ pip install -r requirements.txt
     Trained a machine learning model to predicts the genre of a new song based on its Spotify audio features.
 
 ## Conclusion
-       Conclusions about model performances, a table of the models' metrics, and graphs are provided.
+Conclusions about model performances, a table of the models' metrics, and graphs are provided.
+
+| Index | Model                              | F1        | AUC_ROC  | Accuracy  |
+|-------|------------------------------------|-----------|----------|-----------|
+| 0     | Random Forest                      | 0.472206  | 0.885439 | 0.471111  |
+| 1     | Support Vector Machine (SVM)      | 0.424195  | NaN      | 0.426667  |
+| 2     | Gradient Boosting                  | 0.464789  | 0.867793 | 0.457778  |
+| 3     | SVM with PCA                      | 0.464789  | 0.867793 | 0.457778  |
+| 4     | Random Forest with class weights    | 0.429641  | NaN      | 0.422222  |
+| 5     | CatBoostClassifier                 | 0.574362  | 0.913466 | 0.568889  |
+| 6     | Logistic Regression                | 0.424918  | 0.874830 | 0.417778  |
+| 7     | KNeighbors Classifier              | 0.437653  | 0.773724 | 0.435556  |
+
 
 - The CatBoostClassifier works best for the AUC_ROC, accuracy, and f1 metrics. Metrics for all the models tried were collected in the above table for easy comparison. A constant model would be right only 10% of the time. CatBoost had an overall accuracy of .57. Classification reports were generated for each model for ease of comparison across individual genres and models. Support Vector Machines are incompatible with roc_auc scores so a np.nan was left in that spot in the table and graphs.
 - The easiest way to improve models' performances would be to add more data to the 'clean_spotify_set2.csv' file. The code has been set up to allow for automatic updating of the dataset to increase the variety of data it has to work with, while checking for duplicates.
